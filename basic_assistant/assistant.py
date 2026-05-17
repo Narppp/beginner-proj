@@ -11,9 +11,12 @@ while True:
 
     if user_pick == "Calculator":
         while True:
-            num1_input = input("Enter your first number: ").replace(" ", "")
+            num1_input = input("Enter your first number (Type 'X' to exit the program): ").replace(" ", "")
 
-            if not num1_input.isdigit():
+            if num1_input == "X":
+                print("Exiting program...")
+                break
+            elif not num1_input.isdigit():
                 print("Invalid number, try again.")
                 continue
             else:
@@ -48,23 +51,55 @@ while True:
                             else:
                                 print("Invalid operation, try again.")
                                 continue
-                    try_again = input("Want to try the calculator again? (Y/N): ").title().replace(" ", "")
-
-                    if try_again == "Y":
-                        break
-                    elif try_again != "N":
-                        print("Invalid option, exiting program...")
-                        exit()
-                    else:
-                        print("Restarting Program...")
-                        break
+                    print("Restarting Program...")
+                    break
             print("Please wait...")
-            break
-                    
+            break    
         
     elif user_pick == "Email":
         while True:
-            pass
+            first_name = input("Enter your first name (Type 'X' to exit the program): ").lower().replace(" ", "")
+
+            if first_name == "x":
+                print("Exiting program...")
+                break
+            elif first_name.isdigit() or not first_name.isalpha():
+                print("First Name should not have any numbers.")
+                continue
+            elif len(first_name) < 4:
+                print("First Name is too short, try again.")
+                continue
+            else:
+                while True:
+                    last_name = input("Enter your last name: ").lower().replace(" ", "")
+
+                    if last_name.isdigit() or not first_name.isalpha():
+                        print("Last Name should not have any numbers.")
+                        continue
+                    elif len(last_name) < 4:
+                        print("Last Name is too short, try again.")
+                        continue
+                    else:
+                        while True:
+                            domain_list = ["@gmail.com", "@outlook.com", "@hotmail.com"]
+                            for domain in domain_list:
+                                print(f"{domain:>15}")
+
+                            pick_domain = input("Choose the domain in the list: ").lower()
+
+                            if pick_domain in domain_list:
+                                full_name = first_name[:3] + last_name[-3:] + "123"
+                                full_name += pick_domain
+                                print(f"Your email is: {full_name}")
+                                break
+                            else:
+                                print("Invalid domain, try again.")
+                                continue 
+                    print("Restarting Program...")
+                    break
+            print("Please wait...")
+            break
+
     elif user_pick == "Password":
         while True:
             pass
