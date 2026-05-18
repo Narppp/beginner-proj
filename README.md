@@ -1,5 +1,4 @@
-# beginner-proj
-Beginner Python Projects
+# Beginner Python Projects
 
 1 month worth of Python Beginner Projects 
 
@@ -7,8 +6,12 @@ Hello, I am a beginner that is currently learning Python as my first programming
 
 This is also a stepping stone in my programming journey and I hope that this could be a start of a great thing. That is all, Thank You.
 
+Date Started:
+- May 16, 2026
+
+
 Projects Included:
-1.
+1. CLI Assistant
 2.
 3.
 
