@@ -1,7 +1,7 @@
 # beginner-proj
 Beginner Python Projects
 
-1 Month worth of Python Beginner Projects 
+1 month worth of Python Beginner Projects 
 
 Hello, I am a beginner that is currently learning Python as my first programming language. The projects that I will be putting here are what im able to make in a month. 
 
